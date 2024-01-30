@@ -29,15 +29,15 @@ reader.question('Introduce tu nombre: ', (nombre) => {
             console.log(user); 
           }
         });
-      } else {
-        // Creamos el archivo si no existe
-        fs.writeFile('user.json', JSON.stringify(user), (err) => {
-          if (err) {
-            console.error(err);
-          } else {
-            console.log('Archivo creado correctamente'); 
-          }
-        });
+      // } else {
+      //   // Creamos el archivo si no existe
+      //   fs.writeFile('user.json', JSON.stringify(user), (err) => {
+      //     if (err) {
+      //       console.error(err);
+      //     } else {
+      //       console.log('Archivo creado correctamente'); 
+      //     }
+      //   });
         
       }
 
