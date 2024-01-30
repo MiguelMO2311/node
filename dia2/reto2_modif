@@ -1,0 +1,27 @@
+const fs = require("fs/promises");
+
+const user = {
+    name: 'Pepe',
+    surname: 'Perez',
+    age: 40
+};
+
+fs.unlink('user.json')
+    .then(() => {
+        console.log('El archivo ha sido borrado!');
+        return fs.writeFile('user.json', JSON.stringify(user));
+    })
+    .then(() => {
+        console.log('El archivo ha sido guardado!');
+        return fs.readFile('user.json');
+    })
+    .then((data) => {
+        const user = JSON.parse(data);
+        console.log(user);
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
+
+
