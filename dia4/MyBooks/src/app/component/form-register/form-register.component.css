@@ -1,0 +1,57 @@
+.row{
+    justify-content: center;
+    justify-self: center;
+    padding: 1%;
+}
+
+.containerFormRegister {
+    color: white;
+    width: 50%;
+    height: 40%;
+    background: transparent;
+
+}
+
+.form-label {
+    color: whitesmoke;
+    font-style: bold;
+}
+.form-text{
+    color:rgba(127, 255, 212, 0.646);
+}
+input{
+    
+    background-color:rgba(56, 55, 55, 0.324);
+    font-size: medium;
+}
+input:hover{
+    transition:all 2s ease-in-out;
+    background-color: rgb(225, 218, 218);
+    color:black;
+    font-size:larger;
+}
+#basic-addon3{
+    color:rgb(47, 45, 45);
+    background-color:white;
+}
+.error {
+    color: red;
+  }
+  button{
+
+    background-color:rgb(85, 193, 22);
+}
+h2{
+    display: flex;
+    justify-content: center;
+    color:rgb(15, 154, 57); 
+}
+span{
+    display: flex;
+    justify-content: center;
+    color:rgb(33, 33, 177);
+}
+.subtitle-password{
+    color: white;
+    font-size: x-small;
+}

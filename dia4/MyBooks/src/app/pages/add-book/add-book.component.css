@@ -1,0 +1,32 @@
+
+.container-xxl {
+    background-size: 100%;
+    background-image: url('https://www.shutterstock.com/image-photo/book-bookmark-on-color-background-260nw-2091699934.jpg');
+    background-repeat: no-repeat;
+    padding-left: 65%;
+}
+
+.input-group {
+    width: 325px;
+    font-style: italic;
+
+}
+
+input {
+    width: 300px;
+    background-color: rgba(56, 55, 55, 0.247);
+    font-style: italic;
+}
+
+input:hover {
+    transition: all 2s ease-in-out;
+    background-color: rgb(225, 218, 218);
+    color: black;
+    font-size: larger;
+}
+
+button {
+
+    width: 300px;
+    font-style: italic;
+}

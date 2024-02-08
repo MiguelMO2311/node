@@ -1,0 +1,42 @@
+<div class="container-xxl">
+    <div class="row">
+        <div>
+        <button class="btn btn-warning mb-1 mt-1" type="button">Add book</button>
+        </div>
+        <div class="input-group mb-1"> 
+            <span class="input-group mb-1">Title</span>
+            <input type="text" aria-label="Title" class="form-control" placeholder="Title" #title>
+        </div>
+        <div>
+            <span class="input-group mb-1">Type</span>
+            <input type="text" aria-label="soft/hard cover" class="form-control" placeholder="Cover (Soft/ Hard)"
+            #type>
+        </div>
+        <div>
+            <span class="input-group mb-1">Author</span>
+            <input type="text" aria-label="Author" class="form-control" placeholder="Author" #author>
+        </div>
+        <div>
+            <span class="input-group mb-1">Price</span>
+            <input type="text" aria-label="Price" class="form-control" placeholder="Price" #price>
+        </div>
+        <div>
+            <span class="input-group mb-1">Photo</span>
+            <input type="text" aria-label="Photo" class="form-control" placeholder="URL photo" #photo>
+        </div>
+        <div>
+            <span class="input-group mb-1">Codice Book</span>
+            <input type="text" aria-label="Codice" class="form-control" placeholder="Codice Book" #id_book>
+        </div>
+        <div>
+            <span class="input-group mb-1">Id User</span>
+            <input type="text" aria-label="User" class="form-control" placeholder="User" #id_user>
+        </div>
+        <div>
+            <button (click)="insertNewBook(title, type,author,price,photo, id_book, id_user)"
+                class="btn btn-success mb-3 mt-3" type="button">Insert New Book</button>
+        </div>
+  
+</div>
+
+

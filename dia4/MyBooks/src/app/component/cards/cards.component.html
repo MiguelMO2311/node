@@ -1,0 +1,14 @@
+<div class="card">
+    <button (click)="deleteCard(book.id_book)" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <img src="{{book.photo}}" class="card-img-top" alt="...">
+    <p class="card-type">{{book.type}}</p>
+    <div class="card-body">
+        <h6 class="card-title">{{book.title}}</h6>
+        <p class="card-text-author">{{book.author}}</p>
+        <p class="card-text-ref">{{book.id_book | refBooks}}</p>
+        <h6 class="card-text">{{book.price |euroSymbol}}</h6>
+        <div class="cardButton">
+            <a class="btn btn-outline-primary">Buy</a>
+        </div>
+    </div>
+</div>
