@@ -20,7 +20,7 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <a class="navbar-brand" href="#">
-                                <span class = "title-span"> Pokemons</span>
+                                <span class="title-span"> Pokemons</span>
                                 <img src="./img_pokemon1.jpg" alt="Logo" width="200" height="90"
                                     class="d-inline-block align-items-center">
                                 <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSSJS-Las3O5gjNV0LU-Ux7BioHLmTQIRizycowi6pnNcUpGSfNlGYkHSSTZpY4InZc8127NFX9ZfILjUO4-e61O1OibmkHuQ6UTkvPCvSwsFKQ2yREz2k2CL8tqUva1iVh3ebViFlmBA&usqp=CAc"
@@ -39,16 +39,24 @@
                 <div class="input-group">
                     <span class="btn btn-warning">Id/ or Name/ del Pokemon</span>
                     <input type="number" aria-label="id" class="form-control" id="id">
-                    <input type="text" aria-label="name" class="form-control" name=" name" >
-                    <button type="reset" class="btn btn-danger" id="pokemon">Extraccion del Pokemon</button>
+                    <input type="text" aria-label="name" class="form-control" name=" name">
+                    <button (click)="getPokemon()" type="reset" class="btn btn-danger" id="pokemon">Extraccion del
+                        Pokemon</button>
                 </div>
 
                 <div class="row2">
                     <div class="card">
-                        <img id = "image" src="./img_pokemon_vacio.jpg" class="card-img-top" alt="...">
+                        <img image="image" src="{{result.res.image}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text" id="name">Este POKEMON se encuentra "vacío" a la espera de añadir el buscado por
-                                su ID.</p>
+                            <p class="card-text" name ="name">{{result.res.name}}
+                            </p>
+                            <table>
+                                <th class="encabezado">HABILIDADES
+                                    <tr>
+                                        <p class="table" ability="ability">{{result.res.ability}}</p>
+                                    </tr>
+                                </th>
+                            </table>
                         </div>
                     </div>
                 </div>

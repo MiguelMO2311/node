@@ -1,14 +1,16 @@
 class Pokemon {
-    constructor(id, name) {
+    constructor(id, name, image, ability) {
       this.id = id;
       this.title = name;
+      this.image = image;
+      this.ability =ability;
       
     }
   }
-  // const pokemon = new Pokemon [{id: 0, name:'Pikachu'}];
+  // const pokemon = new Pokemon [{id: 0, name:'Pikachu', image: ''}];
 
 
 
 
-exports  = {Pokemon};
+module.exports  = Pokemon;
   

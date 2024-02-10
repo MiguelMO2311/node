@@ -7,6 +7,7 @@
     background-image: url('./img_pokemons.jpg');
     background-repeat: no-repeat;
     padding-right: 15%;
+ 
 }
 
 .navbar-brand{
@@ -32,10 +33,10 @@
 }
 
 .row2{
-    padding-left: 40%;
+    padding-left: 30%;
     padding-top: 3%;
-
 }
+
 .card{
     width: 16rem;
     display: flex;
@@ -49,4 +50,5 @@ input:hover {
     color: black;
     font-size: larger;
 }
+
 
