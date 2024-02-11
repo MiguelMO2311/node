@@ -46,11 +46,11 @@ function getBookById(req, res) {
 
     let response;
  
-        let book = books.find((book) => book.id == req.query.id);
+        let book = books.find((book) => book.id_book == req.query.id_book);
         if (book) {
           response = book;
         } else {
-            response = { error: true, code: 200, message:`No existe el libro con id:${req.query.id}`,
+            response = { error: true, code: 200, message:`No existe el libro con id:${req.query.id_book}`,
           };
         }
       
@@ -95,9 +95,24 @@ function updateBook_byId(req, res) {
       response = { error: true, code: 200, message: 'El libro no existe' }
     }
     books = books.map((b) => b.id_book === book.id_book ? book : b);
-    response.books = books;
+    response.book = books;
     res.send(response)
   }
+//   function updateBook_byId(req, res) {
+
+//     let response;
+
+//     const bookId = parseInt(req.query.id_book);
+//     const updatedBook = req.body;
+//     const index = books.findIndex((b) => b.id_book === bookId);
+//     if (index === -1) {
+//         response = { error: true, code: 200, message: `No existe ningún libro con el id: ${req.query.id_book} para modificar` }
+//     } else {
+//         books[index] = updatedBook;
+//         response = { error: false, code: 200, message: `El libro con el id: ${req.query.id_book} se ha modificado correctamente`, books }
+//     }
+//     res.send(response)
+// }
 
 function deleteBook_byId(req, res) {
     let response;
