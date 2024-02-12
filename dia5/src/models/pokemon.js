@@ -1,7 +1,7 @@
 class Pokemon {
     constructor(id, name, image, ability) {
       this.id = id;
-      this.title = name;
+      this.name = name;
       this.image = image;
       this.ability =ability;
       

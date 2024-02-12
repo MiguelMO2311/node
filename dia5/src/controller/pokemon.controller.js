@@ -1,6 +1,5 @@
 const axios = require ('axios');
-const Pokemon = require ('../models/pokemon');
-
+const pokemon = require ('../models/pokemon');
 
 async function getPokemon(request, response) {
 
@@ -13,15 +12,16 @@ async function getPokemon(request, response) {
         console.log (data)
 
         const res = {
+            id: data.data.id,
             name: data.data.name,
             image: data.data.sprites.front_default,
-            abilitiy: data.data.ability
+            ability: data.data.ability
         }
         response.send ({error: false, code: 200, res})
     } 
     catch(error){
         console.log(error)
-        response.send({error:true, code: 400})
+        response.send({error: true, code: 400})
     }
 }
 
