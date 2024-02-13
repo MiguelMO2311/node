@@ -24,6 +24,7 @@ async function getPokemon(request, response) {
         response.send({error: true, code: 400})
     }
 }
+// getPokemon();
 
 
 module.exports = { getPokemon}
