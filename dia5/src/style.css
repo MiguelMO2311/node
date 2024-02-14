@@ -7,10 +7,17 @@
 
 body {
   background-image: url('img_pokemons.jpg');
-  background-size: 70%;
+  background-size: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 
+}
+.body_html2{
+  background-image: url('img_huevo.jpg');
+  background-size: 90%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-size: small;
 }
 
 img {
@@ -26,7 +33,7 @@ img {
 form {
   margin-top: 20px;
   background-color: rgb(31, 147, 141);
-  height: 60px;
+  height: 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,13 +44,19 @@ input {
   width: 200px;
   border-radius: 10px;
   border: 3px solid rgb(26, 181, 18);
-  padding-left: 15px;
-
+  padding-left: 2%;
+  margin-left: 6%;
 }
 
 .button {
   width: 80px;
   height: 30px;
+}
+
+.pokemon-button{
+  width: 80px;
+  height: 30px;
+
 }
 
 button {
@@ -60,19 +73,12 @@ button {
 button:hover {
 
   background-color: rgb(199, 23, 23);
-
   color: #f5f3f2;
-
-
-}
-
-#pokemon-name {
-  margin-right: 10px;
 }
 
 #pokemon-card {
   padding-top: 2%;
-  padding-left: 45%;
+  padding-left: 50%;
   width: 250px;
   height: 300px;
   background-color: transparent;
@@ -92,10 +98,14 @@ button:hover {
 }
 
 span {
+  
   text-transform: uppercase;
   color: rgb(199, 23, 23)
 }
-h2{
+h3{
   text-decoration: underline;
   color:blue
+}
+.imgCard{
+  width: 18rem;
 }
