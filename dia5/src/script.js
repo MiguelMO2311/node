@@ -1,34 +1,35 @@
 
-document.getElementById('search-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    let pokemonName = document.getElementById('pokemon-name').value.toLowerCase();
-    obtenerPokemon(pokemonName);
-  });
-  
+document.getElementById('search-form').addEventListener('submit', function (p) {
+  p.preventDefault();
 
-  async function obtenerPokemon(pokemonName) {
-    try {
-      let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-      let data = await response.json();
-      mostrarPokemon(data);
-    } catch (error) {
-      console.error('Error al obtener datos del Pokémon:', error);
-    }
+  let pokemonId = document.getElementById('pokemon_id').value;
+  getPokemon(pokemonId);
+});
+
+
+async function getPokemon(pokemonId) {
+  try {
+    let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
+    let data = await response.json();
+    showPokemon(data);
+  } catch (error) {
+    console.error('Error en extracción de datos del Pokémon:', error);
   }
+}
 
-  
-  function mostrarPokemon(pokemon) {
-    let displayDiv = document.getElementById('pokemon-card');
-    displayDiv.innerHTML = `
+function showPokemon(pokemon) {
+  let displayDiv = document.getElementById('pokemon-card');
+  displayDiv.innerHTML = `
     <div class="card">
-      <h1>${pokemon.name}</h1>
+      <h1><span>${pokemon.name}</span></h1>
       <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
       <table>
         <tr>
-          <th>Habilidad</th>
+          <th><h2>Abilities</h2></th>
         </tr>
-        ${pokemon.abilities.map(ability => `<tr><td>${ability.ability.name}</td></tr>`).join('')}
+        ${pokemon.abilities.map(ability => `<tr>
+        <td>${ability.ability.name}</td></tr>`).join('')}
       </table>
     </div>  
     `;
-  }
+}
