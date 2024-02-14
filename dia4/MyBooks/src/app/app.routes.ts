@@ -7,6 +7,7 @@ import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { BooksService } from './services/books.service';
 import { LoginComponent } from './pages/login/login.component';
+import { HttpClient } from '@angular/common/http';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/Home', pathMatch: 'full' },
@@ -17,4 +18,6 @@ export const routes: Routes = [
     { path: 'AddBook', component: AddBookComponent },
     { path: 'UpdateBook', component: UpdateBookComponent },
     { path: 'Login', component: LoginComponent },
+    { path: 'BookService', component: BooksService},
+    { path: 'HttpClient', component:HttpClient}
 ];

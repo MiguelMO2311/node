@@ -7,3 +7,5 @@ export class Books  {
         public  price!: number;
         public  photo!: string;
     }
+
+  

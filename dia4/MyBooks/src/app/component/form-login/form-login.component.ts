@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { LoginComponent } from '../../pages/login/login.component';
-import { User } from '../../../../MyBooks/src/app/models/user';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'app-form-login',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, LoginComponent,],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, LoginComponent],
   templateUrl: './form-login.component.html',
   styleUrl: './form-login.component.css'
 })
